@@ -15,12 +15,16 @@ function Counter() {
     const decrementCount = () => {
         setCount(count - 1);
     };
+
     return(
-        <div id="counter-container">
-            <h1>{count}</h1>
-            <button onClick={incrementCount}>Increment</button>
-            <button onClick={resetCount}>Set to 0</button>
-            <button onClick={decrementCount}>Decrement</button>
+        <div  className="counter-container">
+            <h1 className="counter-title">Container</h1>
+            <div className="counter-inner-container">
+                <h1 className="counter-text">{count}</h1>
+                <button onClick={incrementCount}>Increment</button>
+                <button onClick={resetCount}>Set to 0</button>
+                <button onClick={decrementCount}>Decrement</button>
+            </div>
         </div>
     )
 }
